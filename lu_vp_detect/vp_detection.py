@@ -9,7 +9,7 @@ Author: Ray Phan (https://github.com/rayryeng)
 import cv2
 import numpy as np
 from itertools import combinations
-
+from google.colab.patches import cv2_imshow
 
 class VPDetection(object):
     """
@@ -594,9 +594,9 @@ class VPDetection(object):
 
         # Show image if necessary
         if show_image:
-            cv2.imshow('VP Debug Image', img)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+            cv2_imshow(img)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
 
         # Save image if necessary
         if save_image is not None and save_image != '':
